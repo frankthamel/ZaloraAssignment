@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		0146E253236D5E2300FF8731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0146E252236D5E2300FF8731 /* Assets.xcassets */; };
 		0146E256236D5E2300FF8731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0146E254236D5E2300FF8731 /* LaunchScreen.storyboard */; };
 		0146E261236D5E2400FF8731 /* ZaloraAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E260236D5E2400FF8731 /* ZaloraAssignmentTests.swift */; };
+		5BAB7B1FD94F866B7BCD98F7 /* Pods_ZaloraAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 574192D4F8C97F871E8FB9CD /* Pods_ZaloraAssignment.framework */; };
+		C48AB5546FDFB5A2367304C6 /* Pods_ZaloraAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD75F463E12E61A685685854 /* Pods_ZaloraAssignmentTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,12 @@
 		0146E25C236D5E2400FF8731 /* ZaloraAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZaloraAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0146E260236D5E2400FF8731 /* ZaloraAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZaloraAssignmentTests.swift; sourceTree = "<group>"; };
 		0146E262236D5E2400FF8731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45B48047F65904BC6BF430E9 /* Pods-ZaloraAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaloraAssignment.debug.xcconfig"; path = "Target Support Files/Pods-ZaloraAssignment/Pods-ZaloraAssignment.debug.xcconfig"; sourceTree = "<group>"; };
+		574192D4F8C97F871E8FB9CD /* Pods_ZaloraAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZaloraAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		580D3462B715D87878DA9BD7 /* Pods-ZaloraAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaloraAssignment.release.xcconfig"; path = "Target Support Files/Pods-ZaloraAssignment/Pods-ZaloraAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		CD75F463E12E61A685685854 /* Pods_ZaloraAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZaloraAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7625DA9C7CB4A8F9D91867B /* Pods-ZaloraAssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaloraAssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-ZaloraAssignmentTests/Pods-ZaloraAssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
+		F3CB5819391161537E24740B /* Pods-ZaloraAssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaloraAssignmentTests.debug.xcconfig"; path = "Target Support Files/Pods-ZaloraAssignmentTests/Pods-ZaloraAssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BAB7B1FD94F866B7BCD98F7 /* Pods_ZaloraAssignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C48AB5546FDFB5A2367304C6 /* Pods_ZaloraAssignmentTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +74,8 @@
 				0146E248236D5E2200FF8731 /* ZaloraAssignment */,
 				0146E25F236D5E2400FF8731 /* ZaloraAssignmentTests */,
 				0146E247236D5E2200FF8731 /* Products */,
+				8C12C871CD37E6C86C25023F /* Pods */,
+				F3A904E37A2F12609E77EF87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,12 +91,15 @@
 		0146E248236D5E2200FF8731 /* ZaloraAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				0146E249236D5E2200FF8731 /* AppDelegate.swift */,
-				0146E24B236D5E2200FF8731 /* SceneDelegate.swift */,
-				0146E24D236D5E2200FF8731 /* ViewController.swift */,
-				0146E24F236D5E2200FF8731 /* Main.storyboard */,
-				0146E252236D5E2300FF8731 /* Assets.xcassets */,
-				0146E254236D5E2300FF8731 /* LaunchScreen.storyboard */,
+				0146E273236D653000FF8731 /* UI */,
+				0146E272236D650E00FF8731 /* Delegates */,
+				0146E26E236D64B600FF8731 /* Controllers */,
+				0146E26D236D64B000FF8731 /* Model */,
+				0146E26C236D64A900FF8731 /* View */,
+				0146E26B236D648E00FF8731 /* ViewModel */,
+				0146E26F236D64C500FF8731 /* Helpers */,
+				0146E270236D64DF00FF8731 /* Resources */,
+				0146E271236D64EE00FF8731 /* Config */,
 				0146E257236D5E2300FF8731 /* Info.plist */,
 			);
 			path = ZaloraAssignment;
@@ -99,6 +114,95 @@
 			path = ZaloraAssignmentTests;
 			sourceTree = "<group>";
 		};
+		0146E26B236D648E00FF8731 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0146E26C236D64A900FF8731 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0146E26D236D64B000FF8731 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0146E26E236D64B600FF8731 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0146E24D236D5E2200FF8731 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0146E26F236D64C500FF8731 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0146E270236D64DF00FF8731 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0146E252236D5E2300FF8731 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0146E271236D64EE00FF8731 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		0146E272236D650E00FF8731 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				0146E249236D5E2200FF8731 /* AppDelegate.swift */,
+				0146E24B236D5E2200FF8731 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		0146E273236D653000FF8731 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0146E24F236D5E2200FF8731 /* Main.storyboard */,
+				0146E254236D5E2300FF8731 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8C12C871CD37E6C86C25023F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45B48047F65904BC6BF430E9 /* Pods-ZaloraAssignment.debug.xcconfig */,
+				580D3462B715D87878DA9BD7 /* Pods-ZaloraAssignment.release.xcconfig */,
+				F3CB5819391161537E24740B /* Pods-ZaloraAssignmentTests.debug.xcconfig */,
+				D7625DA9C7CB4A8F9D91867B /* Pods-ZaloraAssignmentTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F3A904E37A2F12609E77EF87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				574192D4F8C97F871E8FB9CD /* Pods_ZaloraAssignment.framework */,
+				CD75F463E12E61A685685854 /* Pods_ZaloraAssignmentTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0146E265236D5E2400FF8731 /* Build configuration list for PBXNativeTarget "ZaloraAssignment" */;
 			buildPhases = (
+				D739080F8E966B0D22358CC6 /* [CP] Check Pods Manifest.lock */,
 				0146E242236D5E2200FF8731 /* Sources */,
 				0146E243236D5E2200FF8731 /* Frameworks */,
 				0146E244236D5E2200FF8731 /* Resources */,
+				D4512FE63EE06D2FC4ED69C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +229,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0146E268236D5E2400FF8731 /* Build configuration list for PBXNativeTarget "ZaloraAssignmentTests" */;
 			buildPhases = (
+				F05E7C2ECD2195F1623345A2 /* [CP] Check Pods Manifest.lock */,
 				0146E258236D5E2400FF8731 /* Sources */,
 				0146E259236D5E2400FF8731 /* Frameworks */,
 				0146E25A236D5E2400FF8731 /* Resources */,
@@ -194,6 +301,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D4512FE63EE06D2FC4ED69C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZaloraAssignment/Pods-ZaloraAssignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZaloraAssignment/Pods-ZaloraAssignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZaloraAssignment/Pods-ZaloraAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D739080F8E966B0D22358CC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZaloraAssignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F05E7C2ECD2195F1623345A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZaloraAssignmentTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0146E242236D5E2200FF8731 /* Sources */ = {
@@ -360,6 +531,7 @@
 		};
 		0146E266236D5E2400FF8731 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45B48047F65904BC6BF430E9 /* Pods-ZaloraAssignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +550,7 @@
 		};
 		0146E267236D5E2400FF8731 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 580D3462B715D87878DA9BD7 /* Pods-ZaloraAssignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +569,7 @@
 		};
 		0146E269236D5E2400FF8731 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3CB5819391161537E24740B /* Pods-ZaloraAssignmentTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +592,7 @@
 		};
 		0146E26A236D5E2400FF8731 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7625DA9C7CB4A8F9D91867B /* Pods-ZaloraAssignmentTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
