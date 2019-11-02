@@ -9,11 +9,18 @@
 /* Begin PBXBuildFile section */
 		0146E24A236D5E2200FF8731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E249236D5E2200FF8731 /* AppDelegate.swift */; };
 		0146E24C236D5E2200FF8731 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E24B236D5E2200FF8731 /* SceneDelegate.swift */; };
-		0146E24E236D5E2200FF8731 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E24D236D5E2200FF8731 /* ViewController.swift */; };
 		0146E251236D5E2200FF8731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0146E24F236D5E2200FF8731 /* Main.storyboard */; };
 		0146E253236D5E2300FF8731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0146E252236D5E2300FF8731 /* Assets.xcassets */; };
 		0146E256236D5E2300FF8731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0146E254236D5E2300FF8731 /* LaunchScreen.storyboard */; };
 		0146E261236D5E2400FF8731 /* ZaloraAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E260236D5E2400FF8731 /* ZaloraAssignmentTests.swift */; };
+		0146E276236DD54300FF8731 /* RoundedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E275236DD54300FF8731 /* RoundedUIButton.swift */; };
+		0146E278236DD58800FF8731 /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E277236DD58800FF8731 /* CustomUIView.swift */; };
+		0146E27A236DD80400FF8731 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E279236DD80400FF8731 /* SignInViewController.swift */; };
+		0146E27C236DE17B00FF8731 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E27B236DE17B00FF8731 /* SignInViewModel.swift */; };
+		0146E27D236DE17B00FF8731 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E27B236DE17B00FF8731 /* SignInViewModel.swift */; };
+		0146E27F236DE31D00FF8731 /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E27E236DE31D00FF8731 /* TwitterService.swift */; };
+		0146E280236DE31D00FF8731 /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E27E236DE31D00FF8731 /* TwitterService.swift */; };
+		0146E282236DE54D00FF8731 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E281236DE54D00FF8731 /* Constants.swift */; };
 		5BAB7B1FD94F866B7BCD98F7 /* Pods_ZaloraAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 574192D4F8C97F871E8FB9CD /* Pods_ZaloraAssignment.framework */; };
 		C48AB5546FDFB5A2367304C6 /* Pods_ZaloraAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD75F463E12E61A685685854 /* Pods_ZaloraAssignmentTests.framework */; };
 /* End PBXBuildFile section */
@@ -32,7 +39,6 @@
 		0146E246236D5E2200FF8731 /* ZaloraAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZaloraAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0146E249236D5E2200FF8731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0146E24B236D5E2200FF8731 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0146E24D236D5E2200FF8731 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0146E250236D5E2200FF8731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0146E252236D5E2300FF8731 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0146E255236D5E2300FF8731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +46,12 @@
 		0146E25C236D5E2400FF8731 /* ZaloraAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZaloraAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0146E260236D5E2400FF8731 /* ZaloraAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZaloraAssignmentTests.swift; sourceTree = "<group>"; };
 		0146E262236D5E2400FF8731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0146E275236DD54300FF8731 /* RoundedUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIButton.swift; sourceTree = "<group>"; };
+		0146E277236DD58800FF8731 /* CustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
+		0146E279236DD80400FF8731 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		0146E27B236DE17B00FF8731 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		0146E27E236DE31D00FF8731 /* TwitterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterService.swift; sourceTree = "<group>"; };
+		0146E281236DE54D00FF8731 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		45B48047F65904BC6BF430E9 /* Pods-ZaloraAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaloraAssignment.debug.xcconfig"; path = "Target Support Files/Pods-ZaloraAssignment/Pods-ZaloraAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 		574192D4F8C97F871E8FB9CD /* Pods_ZaloraAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZaloraAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		580D3462B715D87878DA9BD7 /* Pods-ZaloraAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaloraAssignment.release.xcconfig"; path = "Target Support Files/Pods-ZaloraAssignment/Pods-ZaloraAssignment.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,7 +109,8 @@
 				0146E26D236D64B000FF8731 /* Model */,
 				0146E26C236D64A900FF8731 /* View */,
 				0146E26B236D648E00FF8731 /* ViewModel */,
-				0146E26F236D64C500FF8731 /* Helpers */,
+				0146E26F236D64C500FF8731 /* Service */,
+				0146E274236DD42F00FF8731 /* Layout */,
 				0146E270236D64DF00FF8731 /* Resources */,
 				0146E271236D64EE00FF8731 /* Config */,
 				0146E257236D5E2300FF8731 /* Info.plist */,
@@ -117,6 +130,7 @@
 		0146E26B236D648E00FF8731 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0146E27B236DE17B00FF8731 /* SignInViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -138,16 +152,17 @@
 		0146E26E236D64B600FF8731 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0146E24D236D5E2200FF8731 /* ViewController.swift */,
+				0146E279236DD80400FF8731 /* SignInViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		0146E26F236D64C500FF8731 /* Helpers */ = {
+		0146E26F236D64C500FF8731 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				0146E27E236DE31D00FF8731 /* TwitterService.swift */,
 			);
-			path = Helpers;
+			path = Service;
 			sourceTree = "<group>";
 		};
 		0146E270236D64DF00FF8731 /* Resources */ = {
@@ -161,6 +176,7 @@
 		0146E271236D64EE00FF8731 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				0146E281236DE54D00FF8731 /* Constants.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -181,6 +197,15 @@
 				0146E254236D5E2300FF8731 /* LaunchScreen.storyboard */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		0146E274236DD42F00FF8731 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				0146E275236DD54300FF8731 /* RoundedUIButton.swift */,
+				0146E277236DD58800FF8731 /* CustomUIView.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		8C12C871CD37E6C86C25023F /* Pods */ = {
@@ -371,9 +396,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0146E24E236D5E2200FF8731 /* ViewController.swift in Sources */,
+				0146E278236DD58800FF8731 /* CustomUIView.swift in Sources */,
+				0146E27F236DE31D00FF8731 /* TwitterService.swift in Sources */,
 				0146E24A236D5E2200FF8731 /* AppDelegate.swift in Sources */,
+				0146E27C236DE17B00FF8731 /* SignInViewModel.swift in Sources */,
 				0146E24C236D5E2200FF8731 /* SceneDelegate.swift in Sources */,
+				0146E27A236DD80400FF8731 /* SignInViewController.swift in Sources */,
+				0146E276236DD54300FF8731 /* RoundedUIButton.swift in Sources */,
+				0146E282236DE54D00FF8731 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +411,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0146E27D236DE17B00FF8731 /* SignInViewModel.swift in Sources */,
 				0146E261236D5E2400FF8731 /* ZaloraAssignmentTests.swift in Sources */,
+				0146E280236DE31D00FF8731 /* TwitterService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
