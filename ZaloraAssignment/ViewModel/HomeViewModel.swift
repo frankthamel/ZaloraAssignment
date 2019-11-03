@@ -10,20 +10,22 @@ import Foundation
 import UIKit
 
 struct HomeViewModel {
-    let title : String
+    let userProfile : TwitterUserProfile
+    
+    var downloadedProfileImage : UIImage?
     
     var prifileImage : UIImage {
-        return UIImage(named: "createTweetButton")!
+        return downloadedProfileImage ?? UIImage(named: "createTweetButton")!
     }
     
     var profileName : String {
-        return "@\(title)"
+        return "@\(userProfile.screenName)"
     }
 }
 
 extension HomeViewModel {
     func configureView(profileImageView : UIImageView, profileNameLabel : UILabel ) {
         profileImageView.image = prifileImage
-        profileNameLabel.text = title
+        profileNameLabel.text = profileName
     }
 }

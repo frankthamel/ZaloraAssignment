@@ -9,6 +9,8 @@
 import Foundation
 import Swifter
 import SafariServices
+import Alamofire
+import AlamofireImage
 
 extension SignInViewController : SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
@@ -40,19 +42,39 @@ class TwitterService {
         }
     }
     
-//    self.swifter.getTimeline(for: UserTag.id(token.userID!), success: { json in
-//      print(json)
-//    }, failure: { error in
-//      // ...
-//    })
+    func getUser(withUserId userId : String, success: @escaping (TwitterUserProfile) -> Void ) {
+        self.swifter.showUser(UserTag.id(userId), success: { (json) in
+            
+            let data = "\(json)".data(using: .utf8)!
+            let decoder = JSONDecoder()
+            let profile = try? decoder.decode(TwitterUserProfile.self, from: data)
+            
+            if let profile = profile {
+                success(profile)
+            } else {
+                // log error
+            }
+        }) { (error) in
+            //log error
+        }
+    }
+    
+    func downloadImageFor(imageUrl: String, completion: @escaping (_ image: UIImage) -> ()) {
+        Alamofire.request(imageUrl).responseImage { (imageResponse) in
+            guard let image = imageResponse.result.value else { return }
+            completion(image)
+        }
+    }
+    
+    //    self.swifter.getTimeline(for: UserTag.id(token.userID!), success: { json in
+    //      print(json)
+    //    }, failure: { error in
+    //      // ...
+    //    })
     
     
     
-//    self.swifter.showUser(UserTag.id(token.userID!), success: { (json) in
-//        print(json)
-//    }) { (error) in
-//        // ..
-//    }
+    
     
 }
 

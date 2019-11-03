@@ -9,6 +9,7 @@ target 'ZaloraAssignment' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Swifter', :git => 'https://github.com/mattdonnelly/Swifter.git'
+  pod 'AlamofireImage'
 
   target 'ZaloraAssignmentTests' do
     inherit! :search_paths

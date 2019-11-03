@@ -27,8 +27,20 @@ struct SignInViewModel {
             viewController.modalPresentationStyle = .fullScreen
             viewController.present(navController, animated: true, completion: {
                 if let homeViewController = navController.topViewController as? HomeViewController {
-                    let homeViewModel = HomeViewModel(title: token.screenName ?? "Unknown")
+                    var homeViewModel = HomeViewModel(userProfile: TwitterUserProfile(screenName: token.screenName ?? "", name: "", imageUrl: ""))
                     homeViewController.homeViewModel.accept(homeViewModel)
+                    
+                    // get image url
+                    TwitterService.instance.getUser(withUserId: token.userID ?? "") { (profile) in
+                        print(profile.imageUrl)
+                        // download image
+                        TwitterService.instance.downloadImageFor(imageUrl: profile.imageUrl) { (image) in
+                            homeViewModel.downloadedProfileImage = image
+                            homeViewController.homeViewModel.accept(homeViewModel)
+                        }
+                    }
+                    
+                    
                 }
             })
                 

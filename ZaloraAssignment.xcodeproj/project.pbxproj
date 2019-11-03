@@ -21,6 +21,9 @@
 		0146E27F236DE31D00FF8731 /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E27E236DE31D00FF8731 /* TwitterService.swift */; };
 		0146E280236DE31D00FF8731 /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E27E236DE31D00FF8731 /* TwitterService.swift */; };
 		0146E282236DE54D00FF8731 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E281236DE54D00FF8731 /* Constants.swift */; };
+		01672745236EC9F4006DDC8F /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01672744236EC9F4006DDC8F /* HomeTableViewCell.swift */; };
+		01672747236EDA6F006DDC8F /* TwitterUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01672746236EDA6F006DDC8F /* TwitterUserProfile.swift */; };
+		01672748236EDA6F006DDC8F /* TwitterUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01672746236EDA6F006DDC8F /* TwitterUserProfile.swift */; };
 		0195AB34236E652900549E17 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0195AB33236E652900549E17 /* HomeViewController.swift */; };
 		0195AB36236E68E000549E17 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0195AB35236E68E000549E17 /* HomeViewModel.swift */; };
 		0195AB37236E68E000549E17 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0195AB35236E68E000549E17 /* HomeViewModel.swift */; };
@@ -57,6 +60,8 @@
 		0146E27B236DE17B00FF8731 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		0146E27E236DE31D00FF8731 /* TwitterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterService.swift; sourceTree = "<group>"; };
 		0146E281236DE54D00FF8731 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		01672744236EC9F4006DDC8F /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		01672746236EDA6F006DDC8F /* TwitterUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUserProfile.swift; sourceTree = "<group>"; };
 		0195AB33236E652900549E17 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0195AB35236E68E000549E17 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0195AB38236E6A7C00549E17 /* TwitterUserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUserToken.swift; sourceTree = "<group>"; };
@@ -147,6 +152,7 @@
 		0146E26C236D64A900FF8731 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				01672744236EC9F4006DDC8F /* HomeTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -155,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				0195AB38236E6A7C00549E17 /* TwitterUserToken.swift */,
+				01672746236EDA6F006DDC8F /* TwitterUserProfile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -407,12 +414,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01672747236EDA6F006DDC8F /* TwitterUserProfile.swift in Sources */,
 				0146E278236DD58800FF8731 /* CustomUIView.swift in Sources */,
 				0146E27F236DE31D00FF8731 /* TwitterService.swift in Sources */,
 				0146E24A236D5E2200FF8731 /* AppDelegate.swift in Sources */,
 				0195AB39236E6A7C00549E17 /* TwitterUserToken.swift in Sources */,
 				0195AB36236E68E000549E17 /* HomeViewModel.swift in Sources */,
 				0146E27C236DE17B00FF8731 /* SignInViewModel.swift in Sources */,
+				01672745236EC9F4006DDC8F /* HomeTableViewCell.swift in Sources */,
 				0146E24C236D5E2200FF8731 /* SceneDelegate.swift in Sources */,
 				0195AB34236E652900549E17 /* HomeViewController.swift in Sources */,
 				0146E27A236DD80400FF8731 /* SignInViewController.swift in Sources */,
@@ -425,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01672748236EDA6F006DDC8F /* TwitterUserProfile.swift in Sources */,
 				0146E27D236DE17B00FF8731 /* SignInViewModel.swift in Sources */,
 				0146E261236D5E2400FF8731 /* ZaloraAssignmentTests.swift in Sources */,
 				0146E280236DE31D00FF8731 /* TwitterService.swift in Sources */,

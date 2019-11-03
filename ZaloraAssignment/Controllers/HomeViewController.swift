@@ -27,6 +27,7 @@ class HomeViewController: UIViewController {
         
         // setup observers
         setupHomeViewModelObservable()
+        bindCreateTweetButton()
         
         // setup view
         setupTableView()
@@ -35,7 +36,7 @@ class HomeViewController: UIViewController {
     private func setupHomeViewModelObservable() {
         homeViewModel.asObservable().subscribe(onNext: { (hvm) in
             if let homeViewModel = hvm {
-                self.title = homeViewModel.profileName
+                self.title = APP_NAME
                 homeViewModel.configureView(profileImageView: self.profileImageView, profileNameLabel: self.profileNameLabel)
             }
         }, onError: { (error) in
@@ -45,6 +46,15 @@ class HomeViewController: UIViewController {
         }) {
             print("Disposed")
         }.disposed(by: disposeBag)
+    }
+    
+    func bindCreateTweetButton() {
+        createTweetButton.rx.tap.throttle(.milliseconds(500), scheduler: MainScheduler.instance).subscribe(onNext : {
+           
+            // Navigate to Create Tweet ViewController
+            print("createTweetButton tapped")
+            
+        }).disposed(by: disposeBag)
     }
     
     private func setupTableView() {
