@@ -10,21 +10,30 @@ import UIKit
 
 struct SignInViewModel {
     
-    private let twitterService = TwitterService()
-    
     func authorize(inViewController viewController: UIViewController) {
-        twitterService.authorize(inViewController: viewController) { (token, error) in
+        TwitterService.instance.authorize(inViewController: viewController) { (token, error) in
             if let error = error {
                 // error
                 print(error.localizedDescription)
             }
             
-            if let token = token {
-                print("Token: \(token)")
-                //viewController.performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
-            } else {
-                // Error
-            }
+            guard let token = token else { return }
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let navigationController = storyboard.instantiateViewController(withIdentifier: HOME_VIEW_CONTROLLER_NAVIGATION_CONTROLLER) as? UINavigationController
+            
+            guard let navController = navigationController else {return}
+            
+            viewController.modalPresentationStyle = .fullScreen
+            viewController.present(navController, animated: true, completion: {
+                if let homeViewController = navController.topViewController as? HomeViewController {
+                    let homeViewModel = HomeViewModel(title: token.screenName ?? "Unknown")
+                    homeViewController.homeViewModel.accept(homeViewModel)
+                }
+            })
+                
+
+            
         }
     }
 }

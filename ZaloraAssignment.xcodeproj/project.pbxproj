@@ -21,6 +21,11 @@
 		0146E27F236DE31D00FF8731 /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E27E236DE31D00FF8731 /* TwitterService.swift */; };
 		0146E280236DE31D00FF8731 /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E27E236DE31D00FF8731 /* TwitterService.swift */; };
 		0146E282236DE54D00FF8731 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E281236DE54D00FF8731 /* Constants.swift */; };
+		0195AB34236E652900549E17 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0195AB33236E652900549E17 /* HomeViewController.swift */; };
+		0195AB36236E68E000549E17 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0195AB35236E68E000549E17 /* HomeViewModel.swift */; };
+		0195AB37236E68E000549E17 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0195AB35236E68E000549E17 /* HomeViewModel.swift */; };
+		0195AB39236E6A7C00549E17 /* TwitterUserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0195AB38236E6A7C00549E17 /* TwitterUserToken.swift */; };
+		0195AB3A236E6A7C00549E17 /* TwitterUserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0195AB38236E6A7C00549E17 /* TwitterUserToken.swift */; };
 		5BAB7B1FD94F866B7BCD98F7 /* Pods_ZaloraAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 574192D4F8C97F871E8FB9CD /* Pods_ZaloraAssignment.framework */; };
 		C48AB5546FDFB5A2367304C6 /* Pods_ZaloraAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD75F463E12E61A685685854 /* Pods_ZaloraAssignmentTests.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +57,9 @@
 		0146E27B236DE17B00FF8731 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		0146E27E236DE31D00FF8731 /* TwitterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterService.swift; sourceTree = "<group>"; };
 		0146E281236DE54D00FF8731 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0195AB33236E652900549E17 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0195AB35236E68E000549E17 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		0195AB38236E6A7C00549E17 /* TwitterUserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUserToken.swift; sourceTree = "<group>"; };
 		45B48047F65904BC6BF430E9 /* Pods-ZaloraAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaloraAssignment.debug.xcconfig"; path = "Target Support Files/Pods-ZaloraAssignment/Pods-ZaloraAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 		574192D4F8C97F871E8FB9CD /* Pods_ZaloraAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZaloraAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		580D3462B715D87878DA9BD7 /* Pods-ZaloraAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaloraAssignment.release.xcconfig"; path = "Target Support Files/Pods-ZaloraAssignment/Pods-ZaloraAssignment.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				0146E27B236DE17B00FF8731 /* SignInViewModel.swift */,
+				0195AB35236E68E000549E17 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -145,6 +154,7 @@
 		0146E26D236D64B000FF8731 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0195AB38236E6A7C00549E17 /* TwitterUserToken.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				0146E279236DD80400FF8731 /* SignInViewController.swift */,
+				0195AB33236E652900549E17 /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -399,8 +410,11 @@
 				0146E278236DD58800FF8731 /* CustomUIView.swift in Sources */,
 				0146E27F236DE31D00FF8731 /* TwitterService.swift in Sources */,
 				0146E24A236D5E2200FF8731 /* AppDelegate.swift in Sources */,
+				0195AB39236E6A7C00549E17 /* TwitterUserToken.swift in Sources */,
+				0195AB36236E68E000549E17 /* HomeViewModel.swift in Sources */,
 				0146E27C236DE17B00FF8731 /* SignInViewModel.swift in Sources */,
 				0146E24C236D5E2200FF8731 /* SceneDelegate.swift in Sources */,
+				0195AB34236E652900549E17 /* HomeViewController.swift in Sources */,
 				0146E27A236DD80400FF8731 /* SignInViewController.swift in Sources */,
 				0146E276236DD54300FF8731 /* RoundedUIButton.swift in Sources */,
 				0146E282236DE54D00FF8731 /* Constants.swift in Sources */,
@@ -414,6 +428,8 @@
 				0146E27D236DE17B00FF8731 /* SignInViewModel.swift in Sources */,
 				0146E261236D5E2400FF8731 /* ZaloraAssignmentTests.swift in Sources */,
 				0146E280236DE31D00FF8731 /* TwitterService.swift in Sources */,
+				0195AB3A236E6A7C00549E17 /* TwitterUserToken.swift in Sources */,
+				0195AB37236E68E000549E17 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
