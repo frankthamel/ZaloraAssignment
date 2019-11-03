@@ -66,6 +66,15 @@ class TwitterService {
         }
     }
     
+    func postTweet(message : String, successStatus : @escaping (Bool) -> ()) {
+       self.swifter.postTweet(status: message, success: { status in
+            successStatus(true)
+        }, failure: { error in
+            print(error.localizedDescription)
+            successStatus(false)
+        })
+    }
+    
     //    self.swifter.getTimeline(for: UserTag.id(token.userID!), success: { json in
     //      print(json)
     //    }, failure: { error in

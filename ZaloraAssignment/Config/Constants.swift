@@ -16,6 +16,7 @@ let TWITTER_CONSUMER_SECRET : String = "pOQKVT6YwNr6j9ai4sJx8AnGKHBq1HgOkKdtzUC9
 
 // MARK: Segues
 let NAVIGATE_TO_HOME_VIEW_CONTROLLER_SEGUE : String = "NavigateToHomeViewControllerSegue"
+let NAVIGATE_TO_CREATE_TWEET_VIEW_CONTROLLER_SEGUE : String = "NavigateToCreateTweetViewControllerSegue"
 
 
 // MARK: View Controller Names

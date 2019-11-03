@@ -28,21 +28,10 @@ class SignInViewController: UIViewController {
     }
     
     func bindSignInWithTwitterButton() {
-        signInWithTwitterButton.rx.tap.throttle(.milliseconds(500), scheduler: MainScheduler.instance).subscribe(onNext : {
+        signInWithTwitterButton.rx.tap.throttle(.milliseconds(500), scheduler: MainScheduler.instance).subscribe(onNext : { [unowned self] in
             // Authenticate using Twitter
             self.signInViewModel.authorize(inViewController: self)
             
         }).disposed(by: disposeBag)
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
