@@ -2,6 +2,33 @@ PODS:
   - Alamofire (4.9.1)
   - AlamofireImage (3.6.0):
     - Alamofire (~> 4.9)
+  - Crashlytics (3.14.0):
+    - Fabric (~> 1.10.2)
+  - Fabric (1.10.2)
+  - FirebaseCore (6.3.2):
+    - FirebaseCoreDiagnostics (~> 1.0)
+    - FirebaseCoreDiagnosticsInterop (~> 1.0)
+    - GoogleUtilities/Environment (~> 6.2)
+    - GoogleUtilities/Logger (~> 6.2)
+  - FirebaseCoreDiagnostics (1.1.1):
+    - FirebaseCoreDiagnosticsInterop (~> 1.0)
+    - GoogleDataTransportCCTSupport (~> 1.0)
+    - GoogleUtilities/Environment (~> 6.2)
+    - GoogleUtilities/Logger (~> 6.2)
+    - nanopb (~> 0.3.901)
+  - FirebaseCoreDiagnosticsInterop (1.0.0)
+  - GoogleDataTransport (3.0.1)
+  - GoogleDataTransportCCTSupport (1.2.1):
+    - GoogleDataTransport (~> 3.0)
+    - nanopb (~> 0.3.901)
+  - GoogleUtilities/Environment (6.3.1)
+  - GoogleUtilities/Logger (6.3.1):
+    - GoogleUtilities/Environment
+  - nanopb (0.3.9011):
+    - nanopb/decode (= 0.3.9011)
+    - nanopb/encode (= 0.3.9011)
+  - nanopb/decode (0.3.9011)
+  - nanopb/encode (0.3.9011)
   - RxCocoa (5.0.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -13,6 +40,9 @@ PODS:
 
 DEPENDENCIES:
   - AlamofireImage (= 3.6.0)
+  - Crashlytics (~> 3.14.0)
+  - Fabric (~> 1.10.2)
+  - FirebaseCore (= 6.3.2)
   - RxCocoa (= 5.0.1)
   - RxSwift (= 5.0.1)
   - Swifter (from `https://github.com/mattdonnelly/Swifter.git`)
@@ -22,6 +52,15 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
+    - Crashlytics
+    - Fabric
+    - FirebaseCore
+    - FirebaseCoreDiagnostics
+    - FirebaseCoreDiagnosticsInterop
+    - GoogleDataTransport
+    - GoogleDataTransportCCTSupport
+    - GoogleUtilities
+    - nanopb
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -39,12 +78,21 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AlamofireImage: be9963c6582d68b39e89191f64c82a7d7bf40fdd
+  Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
+  Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
+  FirebaseCore: beeff42c07c30ea94702471d99db2089b594fbbd
+  FirebaseCoreDiagnostics: af29e43048607588c050889d19204f4d7b758c9f
+  FirebaseCoreDiagnosticsInterop: 6829da2b8d1fc795ff1bd99df751d3788035d2cb
+  GoogleDataTransport: 166f9b9f82cbf60a204e8fe2daa9db3e3ec1fb15
+  GoogleDataTransportCCTSupport: f6ab1962e9dc05ab1fb938b795e5b310209edeec
+  GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
+  nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   Swifter: 114bb57823fb21d5ef0451930e9cbc184c3a867a
   SwiftyBeaver: 3d3e93a12d648bd400b6f2948a7ef128b5b183c7
 
-PODFILE CHECKSUM: a5ca95181aff40703dabfecbb92cf0cdc114f087
+PODFILE CHECKSUM: 57a6fab538c770c3b1f7a88523213838b7a8e56d
 
 COCOAPODS: 1.8.4

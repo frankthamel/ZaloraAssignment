@@ -9,6 +9,8 @@
 import UIKit
 import Swifter
 import SwiftyBeaver
+import FirebaseCore
+import Fabric
 
 let log = SwiftyBeaver.self
 
@@ -18,7 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Logger().setupLogger()
         configureTheme()
-        
+        FirebaseApp.configure()
+        setUpFabric()
+    
         _ = FunctionalHelper.getDocumentsDirectory()
         log.info("ZaloraAssignment loaded")
         return true
@@ -53,6 +57,14 @@ extension AppDelegate {
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    }
+    
+    func setUpFabric() {
+        #if DEBUG
+            Fabric.sharedSDK().debug = true
+        #else
+            Fabric.sharedSDK().debug = false
+        #endif
     }
 }
 

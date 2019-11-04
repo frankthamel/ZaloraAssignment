@@ -20,16 +20,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="bIh-7u-Ml5">
-                                        <rect key="frame" x="-64" y="210.5" width="542" height="475"/>
+                                        <rect key="frame" x="-64" y="213.5" width="542" height="469"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashImage" translatesAutoresizingMaskIntoConstraints="NO" id="kog-7V-Aeo">
                                                 <rect key="frame" x="0.0" y="0.0" width="542" height="382"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqQ-FC-njB" customClass="RoundedUIButton" customModule="ZaloraAssignment" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="419" width="542" height="56"/>
+                                                <rect key="frame" x="0.0" y="419" width="542" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="56" id="E0e-in-Ura"/>
+                                                    <constraint firstAttribute="height" constant="50" id="E0e-in-Ura"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="GtC-ut-qoT"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
@@ -38,7 +38,7 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="28"/>
+                                                        <real key="value" value="25"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
@@ -287,15 +287,15 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bww-3v-lM0">
-                                <rect key="frame" x="20" y="740" width="374" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bww-3v-lM0">
+                                <rect key="frame" x="20" y="755" width="374" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcA-b8-5wO" customClass="RoundedUIButton" customModule="ZaloraAssignment" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
                                         <color key="backgroundColor" name="ErrorColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="Nwb-69-0jU"/>
-                                            <constraint firstAttribute="height" constant="60" id="hsm-GM-c3a"/>
+                                            <constraint firstAttribute="width" constant="45" id="Nwb-69-0jU"/>
+                                            <constraint firstAttribute="height" constant="45" id="hsm-GM-c3a"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="X">
@@ -303,12 +303,12 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="30"/>
+                                                <real key="value" value="22.5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQh-uf-85T" customClass="RoundedUIButton" customModule="ZaloraAssignment" customModuleProvider="target">
-                                        <rect key="frame" x="80" y="0.0" width="294" height="60"/>
+                                        <rect key="frame" x="60" y="0.0" width="314" height="45"/>
                                         <color key="backgroundColor" name="ThemeColor"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
                                         <state key="normal" title="Tweet">
@@ -316,14 +316,14 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="30"/>
+                                                <real key="value" value="22.5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="40" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MbR-NR-6qb">
-                                <rect key="frame" x="20" y="452" width="374" height="280"/>
+                                <rect key="frame" x="20" y="452" width="374" height="295"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CreateTweetTableViewCell" rowHeight="40" id="yeg-gE-L3T" customClass="CreateTweetTableViewCell" customModule="ZaloraAssignment" customModuleProvider="target">

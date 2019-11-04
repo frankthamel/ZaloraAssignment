@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import ZaloraAssignment
 
 class MessageFormatterTests: XCTestCase {
     
@@ -27,7 +28,7 @@ class MessageFormatterTests: XCTestCase {
     }
 
     func testSplitSubMessagesUsing()  {
-        XCTAssertNoThrow(try messageFormatter.splitSubMessagesUsing(source: messages[0]))
+        XCTAssertThrowsError(try messageFormatter.splitSubMessagesUsing(source: messages[0]))
         XCTAssertNoThrow(try messageFormatter.splitSubMessagesUsing(source: messages[1]))
         XCTAssertThrowsError(try messageFormatter.splitSubMessagesUsing(source: messages[2]))
         XCTAssertThrowsError(try messageFormatter.splitSubMessagesUsing(source: messages[3]))

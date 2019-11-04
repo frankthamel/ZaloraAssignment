@@ -23,25 +23,22 @@
 		01672747236EDA6F006DDC8F /* TwitterUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01672746236EDA6F006DDC8F /* TwitterUserProfile.swift */; };
 		01672748236EDA6F006DDC8F /* TwitterUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01672746236EDA6F006DDC8F /* TwitterUserProfile.swift */; };
 		0167274A236EEA16006DDC8F /* TweetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01672749236EEA16006DDC8F /* TweetListViewModel.swift */; };
-		0167274B236EEA16006DDC8F /* TweetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01672749236EEA16006DDC8F /* TweetListViewModel.swift */; };
 		0167274D236EEA46006DDC8F /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0167274C236EEA46006DDC8F /* TweetViewModel.swift */; };
 		0167274E236EEA46006DDC8F /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0167274C236EEA46006DDC8F /* TweetViewModel.swift */; };
 		01672750236EEA57006DDC8F /* TweetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0167274F236EEA57006DDC8F /* TweetModel.swift */; };
 		01672751236EEA57006DDC8F /* TweetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0167274F236EEA57006DDC8F /* TweetModel.swift */; };
 		01672754236EF2C1006DDC8F /* FunctionalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01672753236EF2C1006DDC8F /* FunctionalHelper.swift */; };
-		01672755236EF2C1006DDC8F /* FunctionalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01672753236EF2C1006DDC8F /* FunctionalHelper.swift */; };
 		01672758236EF34F006DDC8F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01672757236EF34F006DDC8F /* String+Extension.swift */; };
 		01672759236EF34F006DDC8F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01672757236EF34F006DDC8F /* String+Extension.swift */; };
 		0167275B236EF39F006DDC8F /* MessageFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0167275A236EF39F006DDC8F /* MessageFormatter.swift */; };
-		0167275C236EF39F006DDC8F /* MessageFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0167275A236EF39F006DDC8F /* MessageFormatter.swift */; };
 		0167275E236EF511006DDC8F /* MessageFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0167275D236EF511006DDC8F /* MessageFormatterTests.swift */; };
 		01672760236F092B006DDC8F /* CreateTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0167275F236F092B006DDC8F /* CreateTweetViewController.swift */; };
 		01672762236F2DCD006DDC8F /* CreateTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01672761236F2DCD006DDC8F /* CreateTweetViewModel.swift */; };
-		01672763236F2DCD006DDC8F /* CreateTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01672761236F2DCD006DDC8F /* CreateTweetViewModel.swift */; };
 		01686309236FF63F00B0E697 /* CreateTweetItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01686308236FF63F00B0E697 /* CreateTweetItemViewModel.swift */; };
 		0168630B236FF76B00B0E697 /* CreateTweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168630A236FF76B00B0E697 /* CreateTweetTableViewCell.swift */; };
 		016863112370248100B0E697 /* AlertProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016863102370248100B0E697 /* AlertProtocol.swift */; };
 		016863132370316900B0E697 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016863122370316900B0E697 /* Logger.swift */; };
+		01686315237061D400B0E697 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01686314237061D400B0E697 /* GoogleService-Info.plist */; };
 		0195AB34236E652900549E17 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0195AB33236E652900549E17 /* HomeViewController.swift */; };
 		0195AB36236E68E000549E17 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0195AB35236E68E000549E17 /* HomeViewModel.swift */; };
 		0195AB37236E68E000549E17 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0195AB35236E68E000549E17 /* HomeViewModel.swift */; };
@@ -93,6 +90,7 @@
 		0168630A236FF76B00B0E697 /* CreateTweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTweetTableViewCell.swift; sourceTree = "<group>"; };
 		016863102370248100B0E697 /* AlertProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertProtocol.swift; sourceTree = "<group>"; };
 		016863122370316900B0E697 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		01686314237061D400B0E697 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0195AB33236E652900549E17 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0195AB35236E68E000549E17 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0195AB38236E6A7C00549E17 /* TwitterUserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUserToken.swift; sourceTree = "<group>"; };
@@ -160,6 +158,7 @@
 				0146E270236D64DF00FF8731 /* Resources */,
 				0146E271236D64EE00FF8731 /* Config */,
 				0146E257236D5E2300FF8731 /* Info.plist */,
+				01686314237061D400B0E697 /* GoogleService-Info.plist */,
 			);
 			path = ZaloraAssignment;
 			sourceTree = "<group>";
@@ -318,6 +317,7 @@
 				0146E243236D5E2200FF8731 /* Frameworks */,
 				0146E244236D5E2200FF8731 /* Resources */,
 				D4512FE63EE06D2FC4ED69C2 /* [CP] Embed Pods Frameworks */,
+				016863162370624C00B0E697 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -391,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0146E256236D5E2300FF8731 /* LaunchScreen.storyboard in Resources */,
+				01686315237061D400B0E697 /* GoogleService-Info.plist in Resources */,
 				0146E253236D5E2300FF8731 /* Assets.xcassets in Resources */,
 				0146E251236D5E2200FF8731 /* Main.storyboard in Resources */,
 			);
@@ -406,6 +407,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		016863162370624C00B0E697 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+		};
 		D4512FE63EE06D2FC4ED69C2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -506,7 +524,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01672755236EF2C1006DDC8F /* FunctionalHelper.swift in Sources */,
 				01672759236EF34F006DDC8F /* String+Extension.swift in Sources */,
 				01672748236EDA6F006DDC8F /* TwitterUserProfile.swift in Sources */,
 				0146E261236D5E2400FF8731 /* ZaloraAssignmentTests.swift in Sources */,
@@ -514,9 +531,6 @@
 				0167275E236EF511006DDC8F /* MessageFormatterTests.swift in Sources */,
 				0195AB3A236E6A7C00549E17 /* TwitterUserToken.swift in Sources */,
 				01672751236EEA57006DDC8F /* TweetModel.swift in Sources */,
-				0167274B236EEA16006DDC8F /* TweetListViewModel.swift in Sources */,
-				0167275C236EF39F006DDC8F /* MessageFormatter.swift in Sources */,
-				01672763236F2DCD006DDC8F /* CreateTweetViewModel.swift in Sources */,
 				0195AB37236E68E000549E17 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -671,6 +685,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = MV76X88Q4Q;
 				INFOPLIST_FILE = ZaloraAssignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
