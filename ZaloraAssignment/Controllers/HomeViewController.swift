@@ -47,11 +47,11 @@ class HomeViewController: UIViewController {
                 homeViewModel.configureView(profileImageView: self.profileImageView, profileNameLabel: self.profileNameLabel)
             }
         }, onError: { (error) in
-            print(error)
+            log.error(error.localizedDescription)
         }, onCompleted: {
-            print("Completed")
+            log.info("Completed")
         }) {
-            print("Disposed")
+            log.info("Disposed")
         }.disposed(by: disposeBag)
     }
     
@@ -79,18 +79,5 @@ class HomeViewController: UIViewController {
     @objc func refreshData() {
         tweetListViewModel.fetchTweets(tableView: tableView)
     }
-    
-    
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+
 }

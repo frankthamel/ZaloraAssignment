@@ -92,7 +92,7 @@ struct MessageFormatter {
         do {
             try messageSeperator()
         } catch {
-            print(error)
+            log.error(error.localizedDescription)
             throw error
         }
         

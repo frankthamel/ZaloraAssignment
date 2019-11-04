@@ -28,7 +28,7 @@ struct CreateTweetViewModel {
                 if let index = event.element {
                     TwitterService.instance.postTweet(message: messages[index]) { (status) in
                         if status {
-                            print("Succesfullt posted the message : \(messages[index])")
+                            log.info("Succesfullt posted the message : \(messages[index])")
                             // push to data sourse which binds to table view as a succuess
                             if index < (messages.count - 1) {
                                 messageTracker.onNext(index + 1)
@@ -42,7 +42,7 @@ struct CreateTweetViewModel {
                             
                         } else {
                             // push to data sourse which binds to table view as a falier
-                            print("Faild to post the message : \(messages[index])")
+                            log.error("Faild to post the message : \(messages[index])")
                             
                             let item = CreateTweetItemViewModel(createTweetModel: CreateTweetModel(text: messages[index], isSuccess: false))
                             sentSubMessagses.append(item)
@@ -55,7 +55,7 @@ struct CreateTweetViewModel {
             }.disposed(by: disposeBag)
         } catch {
             completion(true,false,error as? MessageSplittingError)
-            print(error.localizedDescription)
+            log.error(error.localizedDescription)
         }
     }
 

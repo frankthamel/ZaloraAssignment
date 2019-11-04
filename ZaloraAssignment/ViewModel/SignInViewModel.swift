@@ -13,8 +13,7 @@ struct SignInViewModel {
     func authorize(inViewController viewController: UIViewController) {
         TwitterService.instance.authorize(inViewController: viewController) { (token, error) in
             if let error = error {
-                // error
-                print(error.localizedDescription)
+                log.error(error.localizedDescription)
             }
             
             guard let token = token else { return }
@@ -32,20 +31,15 @@ struct SignInViewModel {
                     
                     // get image url
                     TwitterService.instance.getUser(withUserId: token.userID ?? "") { (profile) in
-                        print(profile.imageUrl)
+                        log.info("Profile image url: \(profile.imageUrl) retreived successfully.")
                         // download image
                         TwitterService.instance.downloadImageFor(imageUrl: profile.imageUrl) { (image) in
                             homeViewModel.downloadedProfileImage = image
                             homeViewController.homeViewModel.accept(homeViewModel)
                         }
                     }
-                    
-                    
                 }
             })
-                
-
-            
         }
     }
 }

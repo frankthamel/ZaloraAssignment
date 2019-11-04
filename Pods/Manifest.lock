@@ -9,12 +9,14 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.0.1)
   - Swifter (2.3.0)
+  - SwiftyBeaver (1.8.3)
 
 DEPENDENCIES:
-  - AlamofireImage
-  - RxCocoa
-  - RxSwift
+  - AlamofireImage (= 3.6.0)
+  - RxCocoa (= 5.0.1)
+  - RxSwift (= 5.0.1)
   - Swifter (from `https://github.com/mattdonnelly/Swifter.git`)
+  - SwiftyBeaver (= 1.8.3)
 
 SPEC REPOS:
   trunk:
@@ -23,6 +25,7 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SwiftyBeaver
 
 EXTERNAL SOURCES:
   Swifter:
@@ -40,7 +43,8 @@ SPEC CHECKSUMS:
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   Swifter: 114bb57823fb21d5ef0451930e9cbc184c3a867a
+  SwiftyBeaver: 3d3e93a12d648bd400b6f2948a7ef128b5b183c7
 
-PODFILE CHECKSUM: f54c148f021ef6a8b00ec418283e676d8d3c94e1
+PODFILE CHECKSUM: a5ca95181aff40703dabfecbb92cf0cdc114f087
 
 COCOAPODS: 1.8.4

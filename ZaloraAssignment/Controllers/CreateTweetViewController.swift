@@ -45,6 +45,7 @@ class CreateTweetViewController: UIViewController, Alert {
                 
                 if let error = error {
                     self?.showAlert(message: error.errorDescription ?? "Error in message text.", withTitle: "Error", inViewController: self)
+                    log.error(error.errorDescription ?? "Error in message text.")
                 }
                 
                 if completed {

@@ -37,7 +37,7 @@ extension TweetListViewModel {
             self.dataSource.onNext(tweetVMList)
             
         }) { (status) in
-            // log error
+            log.error(status ? "Error occoured" : "")
         }
     }
 }

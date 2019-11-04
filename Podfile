@@ -6,10 +6,11 @@ target 'ZaloraAssignment' do
   use_frameworks!
 
   # Pods for ZaloraAssignment
-  pod 'RxSwift'
-  pod 'RxCocoa'
+  pod 'RxSwift', '5.0.1'
+  pod 'RxCocoa', '5.0.1'
   pod 'Swifter', :git => 'https://github.com/mattdonnelly/Swifter.git'
-  pod 'AlamofireImage'
+  pod 'AlamofireImage', '3.6.0'
+  pod 'SwiftyBeaver', '1.8.3'
 
   target 'ZaloraAssignmentTests' do
     inherit! :search_paths
