@@ -26,13 +26,16 @@ extension TweetListViewModel {
         }.disposed(by: disposeBag)
     }
     
-    func fetchTweets() {
+    func fetchTweets(tableView : UITableView) {
         TwitterService.instance.getCurentUserTimeline(success: { (tweets) in
+            
+            DispatchQueue.main.async {
+               tableView.refreshControl?.endRefreshing()
+            }
             // create teet vm from tweets and
             let tweetVMList = tweets.map{TweetViewModel(tweetModel: $0)}
             self.dataSource.onNext(tweetVMList)
             
-            print(tweets)
         }) { (status) in
             // log error
         }

@@ -26,3 +26,4 @@ let HOME_VIEW_CONTROLLER : String = "HomeViewController"
 
 // MARK: Table view Cells
 let HOME_TABLE_VIEW_CELL : String = "HomeTableViewCell"
+let CREATE_TWEET_TABLE_VIEW_CELL : String = "CreateTweetTableViewCell"

@@ -11,12 +11,7 @@ import Foundation
 struct MessageFormatter {
     
     private let CHARACTER_LIMIT : Int = 50
-    
-    enum MessageSplittingError : Error {
-        case characterLimitError(limit : String)
-        case emptyMessageError
-    }
-    
+
     struct Word {
         let text : String
         var isAdded : Bool
@@ -25,7 +20,7 @@ struct MessageFormatter {
     func splitSubMessagesUsing(source : String) throws -> [String] {
         
         guard source.count > 0 else {
-            throw MessageSplittingError.emptyMessageError
+            throw MessageSplittingError.emptyMessageError(message: "Message cannot be blank!")
         }
         
         // if message count less than CHARACTER_LIMIT return as it is
@@ -70,7 +65,7 @@ struct MessageFormatter {
                 }
                 
                 if words[i].text.count > CHARACTER_LIMIT || (((CHARACTER_LIMIT - 1) - messagePrefix.count) < words[i].text.count){
-                    throw MessageSplittingError.characterLimitError(limit: "Word '\(words[i])' can not send via messenger.")
+                    throw MessageSplittingError.characterLimitError(message: "Word '\(words[i].text)' can not send via messenger.")
                 }
                 
                 if i>0 && !words[i-1].isAdded && ((CHARACTER_LIMIT - 1) - messageString.count >= words[i-1].text.count) {
@@ -111,4 +106,16 @@ struct MessageFormatter {
         return messgesModified
     }
     
+}
+
+enum MessageSplittingError : Error {
+    case characterLimitError(message : String)
+    case emptyMessageError (message : String)
+    
+    var errorDescription: String? {
+        switch self {
+        case let .characterLimitError(message), let .emptyMessageError(message):
+            return message
+        }
+    }
 }

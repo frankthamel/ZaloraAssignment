@@ -10,13 +10,14 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class CreateTweetViewController: UIViewController {
+class CreateTweetViewController: UIViewController, Alert {
     
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet weak var clearButton: UIView!
     @IBOutlet weak var closeButton: RoundedUIButton!
     @IBOutlet weak var tweetButton: RoundedUIButton!
     @IBOutlet weak var characterCountLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     // Defining a dispose bag to dispose observables
     var disposeBag = DisposeBag()
@@ -31,12 +32,21 @@ class CreateTweetViewController: UIViewController {
         bindCharacterCountlabel()
         bindClearButton()
         bindCloseButton()
+        
+        // setup view
+        setupTableView()
+        createTweetViewModel.bindDataSource(tableView: tableView)
     }
     
     private func bindTweetButton() {
         tweetButton.rx.tap.throttle(.milliseconds(500), scheduler: MainScheduler.instance).subscribe(onNext : { [weak self] in
             self?.tweetButton.isUserInteractionEnabled = false
-            self?.createTweetViewModel.postTweet(message: self?.messageTextView.text ?? "") { (completed , success) in
+            self?.createTweetViewModel.postTweet(message: self?.messageTextView.text ?? "") { (completed , success , error) in
+                
+                if let error = error {
+                    self?.showAlert(message: error.errorDescription ?? "Error in message text.", withTitle: "Error", inViewController: self)
+                }
+                
                 if completed {
                     self?.tweetButton.isUserInteractionEnabled = true
                 }
@@ -85,6 +95,11 @@ class CreateTweetViewController: UIViewController {
         }.disposed(by: disposeBag)
     }
 
+    private func setupTableView() {
+        tableView.separatorColor = UIColor.clear
+        tableView.estimatedRowHeight = 40.0
+        tableView.rowHeight = UITableView.automaticDimension
+    }
 }
 
 

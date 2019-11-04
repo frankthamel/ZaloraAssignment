@@ -33,7 +33,11 @@ class HomeViewController: UIViewController {
         // setup view
         setupTableView()
         tweetListViewModel.bindDataSource(tableView: tableView)
-        tweetListViewModel.fetchTweets()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tweetListViewModel.fetchTweets(tableView: tableView)
     }
     
     private func setupHomeViewModelObservable() {
@@ -62,8 +66,18 @@ class HomeViewController: UIViewController {
     
     private func setupTableView() {
         tableView.separatorColor = UIColor.clear
-        tableView.estimatedRowHeight = 70.0
+        tableView.estimatedRowHeight = 75.0
         tableView.rowHeight = UITableView.automaticDimension
+        
+        //pull to refresh
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.tintColor = #colorLiteral(red: 0.1764705882, green: 0.662745098, blue: 0.9921568627, alpha: 1)
+        tableView.refreshControl?.attributedTitle = NSAttributedString(string: "Fetching Tweets ...", attributes: .none)
+        tableView.refreshControl?.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+    }
+    
+    @objc func refreshData() {
+        tweetListViewModel.fetchTweets(tableView: tableView)
     }
     
     

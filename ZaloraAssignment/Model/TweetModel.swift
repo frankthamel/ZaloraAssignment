@@ -11,3 +11,8 @@ import Foundation
 struct TweetModel : Decodable {
     let text : String
 }
+
+struct CreateTweetModel {
+    let text : String
+    let isSuccess : Bool
+}
