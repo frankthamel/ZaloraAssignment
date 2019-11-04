@@ -417,6 +417,7 @@
                         <outlet property="characterCountLabel" destination="B33-Yl-1Jo" id="AYa-10-oV6"/>
                         <outlet property="clearButton" destination="X0V-BH-q5z" id="R8C-u4-bsb"/>
                         <outlet property="closeButton" destination="GcA-b8-5wO" id="tGX-TM-poM"/>
+                        <outlet property="messageContainerView" destination="a2K-fM-MZX" id="dvu-gi-ODo"/>
                         <outlet property="messageTextView" destination="84o-Se-iLq" id="6BV-jz-reK"/>
                         <outlet property="tableView" destination="MbR-NR-6qb" id="bn8-ec-3vA"/>
                         <outlet property="tweetButton" destination="pQh-uf-85T" id="ojP-WE-m0W"/>

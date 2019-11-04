@@ -18,4 +18,10 @@ extension Alert {
         alert.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
         viewController?.present(alert, animated: true)
     }
+    
+    func showAlert(message : String, withTitle title : String, inViewController viewController : UIViewController?,withHandler handler: @escaping (UIAlertAction) ->()) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Close", style: .cancel, handler: handler))
+        viewController?.present(alert, animated: true)
+    }
 }

@@ -18,6 +18,7 @@ class CreateTweetViewController: UIViewController, Alert {
     @IBOutlet weak var tweetButton: RoundedUIButton!
     @IBOutlet weak var characterCountLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var messageContainerView: CustomUIView!
     
     // Defining a dispose bag to dispose observables
     var disposeBag = DisposeBag()
@@ -44,7 +45,10 @@ class CreateTweetViewController: UIViewController, Alert {
             self?.createTweetViewModel.postTweet(message: self?.messageTextView.text ?? "") { (completed , success , error) in
                 
                 if let error = error {
-                    self?.showAlert(message: error.errorDescription ?? "Error in message text.", withTitle: "Error", inViewController: self)
+                    self?.messageContainerView.layer.borderColor = #colorLiteral(red: 0.998462975, green: 0.207790792, blue: 0.2040672898, alpha: 1)
+                    self?.showAlert(message: error.errorDescription ?? "Error in message text.", withTitle: "Error", inViewController: self, withHandler: { (action) in
+                        self?.messageContainerView.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+                    })
                     log.error(error.errorDescription ?? "Error in message text.")
                 }
                 
