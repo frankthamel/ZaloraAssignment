@@ -9,7 +9,10 @@
 import UIKit
 
 class HomeTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var messageIdentifierLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,7 +21,12 @@ class HomeTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        
+    }
+    
+    func configureCell(tweet: TweetViewModel) {
+        messageLabel.text = tweet.mesasge
+        messageIdentifierLabel.text = tweet.identifier
     }
 
 }

@@ -14,10 +14,14 @@ struct TweetViewModel {
 
 extension TweetViewModel {
     var mesasge : String {
-        return ""
+        return tweetModel.text
     }
     
     var identifier : String {
-        return ""
+        if let messageIdentifier = tweetModel.text.split(separator: " ").first {
+            return messageIdentifier.contains("/") ? "message \(messageIdentifier)" : ""
+        } else {
+            return ""
+        }
     }
 }

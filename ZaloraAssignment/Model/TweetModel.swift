@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct TweetModel : Codable {
-    let mesage : String
+struct TweetModel : Decodable {
+    let text : String
 }

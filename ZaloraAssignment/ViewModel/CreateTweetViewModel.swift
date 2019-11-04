@@ -43,6 +43,7 @@ struct CreateTweetViewModel {
             }.disposed(by: disposeBag)
 
         } catch {
+            completion(true,false)
             print(error.localizedDescription)
         }
     

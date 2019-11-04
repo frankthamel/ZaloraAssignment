@@ -67,7 +67,7 @@ class TwitterService {
     }
     
     func postTweet(message : String, successStatus : @escaping (Bool) -> ()) {
-       self.swifter.postTweet(status: message, success: { status in
+        self.swifter.postTweet(status: message, success: { status in
             successStatus(true)
         }, failure: { error in
             print(error.localizedDescription)
@@ -75,15 +75,30 @@ class TwitterService {
         })
     }
     
-    //    self.swifter.getTimeline(for: UserTag.id(token.userID!), success: { json in
-    //      print(json)
-    //    }, failure: { error in
-    //      // ...
-    //    })
-    
-    
-    
-    
+    func getCurentUserTimeline(success: @escaping ([TweetModel]) -> Void , failier : @escaping (Bool) -> Void) {
+        
+        guard let userId = userToken?.userID else {
+            // log error
+            failier(false)
+            return
+        }
+        
+        self.swifter.getTimeline(for: UserTag.id(userId), success: { json in
+            //print(json)
+            let data = "\(json)".data(using: .utf8)!
+            let decoder = JSONDecoder()
+            let tweetModels = try? decoder.decode([TweetModel].self, from: data)
+            
+            if let tweets = tweetModels {
+                success(tweets)
+            } else {
+                // log error
+            }
+        }, failure: { error in
+            // log error
+            failier(false)
+        })
+    }
     
 }
 

@@ -22,3 +22,7 @@ let NAVIGATE_TO_CREATE_TWEET_VIEW_CONTROLLER_SEGUE : String = "NavigateToCreateT
 // MARK: View Controller Names
 let HOME_VIEW_CONTROLLER_NAVIGATION_CONTROLLER : String = "HomeViewControllerNavigationController"
 let HOME_VIEW_CONTROLLER : String = "HomeViewController"
+
+
+// MARK: Table view Cells
+let HOME_TABLE_VIEW_CELL : String = "HomeTableViewCell"

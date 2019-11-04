@@ -14,6 +14,7 @@ struct MessageFormatter {
     
     enum MessageSplittingError : Error {
         case characterLimitError(limit : String)
+        case emptyMessageError
     }
     
     struct Word {
@@ -22,6 +23,10 @@ struct MessageFormatter {
     }
     
     func splitSubMessagesUsing(source : String) throws -> [String] {
+        
+        guard source.count > 0 else {
+            throw MessageSplittingError.emptyMessageError
+        }
         
         // if message count less than CHARACTER_LIMIT return as it is
         guard source.count > CHARACTER_LIMIT else {

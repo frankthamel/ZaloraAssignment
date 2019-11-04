@@ -11,7 +11,7 @@ import UIKit
 
 struct HomeViewModel {
     let userProfile : TwitterUserProfile
-    
+
     var downloadedProfileImage : UIImage?
     
     var prifileImage : UIImage {

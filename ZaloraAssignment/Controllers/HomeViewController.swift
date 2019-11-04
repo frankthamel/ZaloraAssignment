@@ -21,6 +21,7 @@ class HomeViewController: UIViewController {
     var disposeBag = DisposeBag()
     
     var homeViewModel : BehaviorRelay<HomeViewModel?> = BehaviorRelay(value: nil)
+    var tweetListViewModel : TweetListViewModel = TweetListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,8 @@ class HomeViewController: UIViewController {
         
         // setup view
         setupTableView()
+        tweetListViewModel.bindDataSource(tableView: tableView)
+        tweetListViewModel.fetchTweets()
     }
     
     private func setupHomeViewModelObservable() {
@@ -59,6 +62,8 @@ class HomeViewController: UIViewController {
     
     private func setupTableView() {
         tableView.separatorColor = UIColor.clear
+        tableView.estimatedRowHeight = 70.0
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
     
