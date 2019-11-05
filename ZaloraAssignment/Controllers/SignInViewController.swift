@@ -28,7 +28,7 @@ class SignInViewController: UIViewController {
     }
     
     func bindSignInWithTwitterButton() {
-        signInWithTwitterButton.rx.tap.throttle(.milliseconds(500), scheduler: MainScheduler.instance).subscribe(onNext : { [unowned self] in
+        signInWithTwitterButton.rx.tap.debounce(.seconds(1), scheduler: MainScheduler.instance).subscribe(onNext : { [unowned self] in
             // Authenticate using Twitter
             self.signInViewModel.authorize(inViewController: self)
             

@@ -40,7 +40,7 @@ class CreateTweetViewController: UIViewController, Alert {
     }
     
     private func bindTweetButton() {
-        tweetButton.rx.tap.throttle(.milliseconds(500), scheduler: MainScheduler.instance).subscribe(onNext : { [weak self] in
+        tweetButton.rx.tap.debounce(.seconds(2), scheduler: MainScheduler.instance).subscribe(onNext : { [weak self] in
             self?.tweetButton.isUserInteractionEnabled = false
             self?.createTweetViewModel.postTweet(message: self?.messageTextView.text ?? "") { (completed , success , error) in
                 
