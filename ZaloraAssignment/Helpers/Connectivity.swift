@@ -9,15 +9,30 @@
 import Foundation
 import Alamofire
 
+/// This protocol is used to check apps' internet connection.
 protocol Connectivity : Alert {
     
 }
 
 extension Connectivity {
+    /// This function is used to check apps' internet connection.
     func isConnectedToInternet() ->Bool {
         return NetworkReachabilityManager()!.isReachable
     }
     
+    /**
+     This function is used to check apps' internet connection, and if the internet connection is lost, it popups an alert message.
+     - Parameters:
+     - viewController: UIViewController?
+     
+     - parameter viewController: This is the presenting view controller.
+     
+     ### Usage Example: ###
+     ````
+     isConnectedToInternet(inViewController : viewController)
+     
+     ````
+     */
     func isConnectedToInternet(inViewController viewController : UIViewController?) ->Bool {
         
         let status = NetworkReachabilityManager()!.isReachable

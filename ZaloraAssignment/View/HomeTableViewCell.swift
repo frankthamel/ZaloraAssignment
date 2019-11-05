@@ -10,23 +10,28 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell {
     
+    /// Message label that displays the fetched Tweet message.
     @IBOutlet weak var messageLabel: UILabel!
+    
+    /// This displays the fetched message identifier.
     @IBOutlet weak var messageIdentifierLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        
-    }
-    
+    /**
+     This method is used to configure the table view cell.
+     - Parameters:
+     - tweet: TweetViewModel
+     
+     - parameter tweet: This is the view model responsible for this cell view.
+     
+     ### Usage Example: ###
+     ````
+     configureCell(tweet: TweetViewModel)
+     
+     ````
+     */
     func configureCell(tweet: TweetViewModel) {
         messageLabel.text = tweet.mesasge
         messageIdentifierLabel.text = tweet.identifier
     }
-
+    
 }

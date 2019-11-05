@@ -14,12 +14,13 @@ class SignInViewController: UIViewController,Connectivity {
     
     @IBOutlet weak var signInWithTwitterButton: RoundedUIButton!
     
-    // Defining a dispose bag to dispose observables
+    /// Defining a dispose bag to dispose observables
     var disposeBag = DisposeBag()
     
-    //let signInViewModel : SignInViewModel
+    /// This view model responsible for all the interactions inside the SignInViewController.
     let signInViewModel : SignInViewModel = SignInViewModel()
     
+    /// override func viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +28,15 @@ class SignInViewController: UIViewController,Connectivity {
         bindSignInWithTwitterButton()
     }
     
+    /**
+     This function binds the signInWithTwitterButton.
+     
+     ### Usage Example: ###
+     ````
+     bindSignInWithTwitterButton()
+     
+     ````
+     */
     func bindSignInWithTwitterButton() {
         signInWithTwitterButton.rx.tap.debounce(.seconds(1), scheduler: MainScheduler.instance).subscribe(onNext : { [unowned self] in
             // Authenticate using Twitter

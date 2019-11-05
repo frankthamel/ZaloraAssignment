@@ -23,6 +23,7 @@ class HomeViewController: UIViewController, Connectivity {
     var homeViewModel : BehaviorRelay<HomeViewModel?> = BehaviorRelay(value: nil)
     var tweetListViewModel : TweetListViewModel = TweetListViewModel()
     
+    /// override func viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +36,7 @@ class HomeViewController: UIViewController, Connectivity {
         tweetListViewModel.bindDataSource(tableView: tableView)
     }
     
+    /// override func viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -44,14 +46,23 @@ class HomeViewController: UIViewController, Connectivity {
         
     }
     
+    /**
+     This function setup the home view model as an observable to refresh UI when the model changes.
+     
+     ### Usage Example: ###
+     ````
+     setupHomeViewModelObservable()
+     
+     ````
+     */
     private func setupHomeViewModelObservable() {
         homeViewModel.asObservable().subscribe(onNext: {  [ unowned self ] (hvm) in
             if let homeViewModel = hvm {
                 self.title = APP_NAME
                 homeViewModel.configureView(profileImageView: self.profileImageView, profileNameLabel: self.profileNameLabel)
             }
-        }, onError: { (error) in
-            log.error(error.localizedDescription)
+            }, onError: { (error) in
+                log.error(error.localizedDescription)
         }, onCompleted: {
             log.info("Completed")
         }) {
@@ -59,15 +70,33 @@ class HomeViewController: UIViewController, Connectivity {
         }.disposed(by: disposeBag)
     }
     
+    /**
+     This function binds the createTweetButton.
+     
+     ### Usage Example: ###
+     ````
+     bindCreateTweetButton()
+     
+     ````
+     */
     private func bindCreateTweetButton() {
         createTweetButton.rx.tap.throttle(.milliseconds(500), scheduler: MainScheduler.instance).subscribe(onNext : {  [ weak self ] in
-           
+            
             // Navigate to Create Tweet ViewController
             self?.performSegue(withIdentifier: NAVIGATE_TO_CREATE_TWEET_VIEW_CONTROLLER_SEGUE, sender: nil)
             
         }).disposed(by: disposeBag)
     }
     
+    /**
+     This function is responsible for setup the posted tweets table view.
+     
+     ### Usage Example: ###
+     ````
+     setupTableView()
+     
+     ````
+     */
     private func setupTableView() {
         tableView.separatorColor = UIColor.clear
         tableView.estimatedRowHeight = 75.0
@@ -80,6 +109,15 @@ class HomeViewController: UIViewController, Connectivity {
         tableView.refreshControl?.addTarget(self, action: #selector(refreshData), for: .valueChanged)
     }
     
+    /**
+     This function is responsible for refreshing table data.
+     
+     ### Usage Example: ###
+     ````
+     refreshData()
+     
+     ````
+     */
     @objc func refreshData() {
         if isConnectedToInternet(inViewController: self) {
             tableView.refreshControl?.attributedTitle = NSAttributedString(string: "Fetching Tweets ...", attributes: .none)
@@ -88,5 +126,5 @@ class HomeViewController: UIViewController, Connectivity {
             tableView.refreshControl?.attributedTitle = NSAttributedString(string: "No internet connection", attributes: .none)
         }
     }
-
+    
 }

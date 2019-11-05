@@ -8,11 +8,19 @@
 
 import Foundation
 
+/// This is the model for the fetched Tweet.
 struct TweetModel : Decodable {
+    
+    /// Fetched Tweet message.
     let text : String
 }
 
+/// This is the model for the created Tweet.
 struct CreateTweetModel {
+    
+    /// Posted Tweet message.
     let text : String
+    
+    /// Posted Tweet message status.
     let isSuccess : Bool
 }

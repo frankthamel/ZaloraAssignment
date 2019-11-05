@@ -12,7 +12,6 @@
 		0146E251236D5E2200FF8731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0146E24F236D5E2200FF8731 /* Main.storyboard */; };
 		0146E253236D5E2300FF8731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0146E252236D5E2300FF8731 /* Assets.xcassets */; };
 		0146E256236D5E2300FF8731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0146E254236D5E2300FF8731 /* LaunchScreen.storyboard */; };
-		0146E261236D5E2400FF8731 /* ZaloraAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E260236D5E2400FF8731 /* ZaloraAssignmentTests.swift */; };
 		0146E276236DD54300FF8731 /* RoundedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E275236DD54300FF8731 /* RoundedUIButton.swift */; };
 		0146E278236DD58800FF8731 /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E277236DD58800FF8731 /* CustomUIView.swift */; };
 		0146E27A236DD80400FF8731 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146E279236DD80400FF8731 /* SignInViewController.swift */; };
@@ -68,7 +67,6 @@
 		0146E255236D5E2300FF8731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0146E257236D5E2300FF8731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0146E25C236D5E2400FF8731 /* ZaloraAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZaloraAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0146E260236D5E2400FF8731 /* ZaloraAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZaloraAssignmentTests.swift; sourceTree = "<group>"; };
 		0146E262236D5E2400FF8731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0146E275236DD54300FF8731 /* RoundedUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIButton.swift; sourceTree = "<group>"; };
 		0146E277236DD58800FF8731 /* CustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 		0146E25F236D5E2400FF8731 /* ZaloraAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				0146E260236D5E2400FF8731 /* ZaloraAssignmentTests.swift */,
 				0146E262236D5E2400FF8731 /* Info.plist */,
 				0167275D236EF511006DDC8F /* MessageFormatterTests.swift */,
 			);
@@ -530,7 +527,6 @@
 			files = (
 				01672759236EF34F006DDC8F /* String+Extension.swift in Sources */,
 				01672748236EDA6F006DDC8F /* TwitterUserProfile.swift in Sources */,
-				0146E261236D5E2400FF8731 /* ZaloraAssignmentTests.swift in Sources */,
 				0167274E236EEA46006DDC8F /* TweetViewModel.swift in Sources */,
 				0167275E236EF511006DDC8F /* MessageFormatterTests.swift in Sources */,
 				0195AB3A236E6A7C00549E17 /* TwitterUserToken.swift in Sources */,

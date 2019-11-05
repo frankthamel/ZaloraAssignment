@@ -8,11 +8,20 @@
 
 import Foundation
 
-
+/// This is the model for the Twitter user token.
 struct TwitterUserToken {
+    /// This contains the user token.
     let key : String
+    
+    /// This contains the Twitter username.
     let screenName : String?
+    
+    /// This contains the secret key.
     let secret : String
+    
+    /// This contains the current user id.
     let userID : String?
+    
+    /// This contains the verifier.
     let verifier : String?
 }

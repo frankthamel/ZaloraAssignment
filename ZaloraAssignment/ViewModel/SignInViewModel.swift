@@ -8,8 +8,21 @@
 
 import UIKit
 
+/// This view model responsible for all the interactions inside the SignInViewController.
 struct SignInViewModel {
     
+    /**
+     This function is used to authorize users via Twitter.
+     - Parameters:
+     - viewController: UIViewController
+     
+     - parameter viewController: This is the view-controller which presents the Twitter login in SFSafariViewController.
+     
+     ### Usage Example: ###
+     ````
+     authorize(inViewController: UIViewController)
+     ````
+     */
     func authorize(inViewController viewController: UIViewController) {
         TwitterService.instance.authorize(inViewController: viewController) { (token, error) in
             if let error = error {

@@ -8,7 +8,18 @@
 
 import Foundation
 
+/// This is a class that contains all the reusable functions.
 class FunctionalHelper {
+    
+    /**
+     This method is used to retrieve the app document path.
+     
+     ### Usage Example: ###
+     ````
+     FunctionalHelper().getDocumentsDirectory()
+     
+     ````
+     */
     class func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]

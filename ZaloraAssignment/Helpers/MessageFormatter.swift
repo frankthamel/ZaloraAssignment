@@ -8,15 +8,30 @@
 
 import Foundation
 
+/// This is a struct that can be used to split a given message into a provided length sub-messages.
 struct MessageFormatter {
     
     private let CHARACTER_LIMIT : Int = 50
-
+    
+    /// This struct is used to store text and its status.
     struct Word {
         let text : String
         var isAdded : Bool
     }
     
+    /**
+     This function can be used to split a given message into a provided length sub-messages. An identifier appends as a prefix for each sub-messages.
+     - Parameters:
+     - source: String
+     
+     - parameter source: This is the source message that needs to split into multiple parts.
+     
+     ### Usage Example: ###
+     ````
+     let messages : [String] = try! splitSubMessagesUsing(source : "String")
+     
+     ````
+     */
     func splitSubMessagesUsing(source : String) throws -> [String] {
         
         guard source.count > 0 else {
@@ -108,6 +123,7 @@ struct MessageFormatter {
     
 }
 
+/// This is a custom error that used in MesageFormatter.
 enum MessageSplittingError : Error {
     case characterLimitError(message : String)
     case emptyMessageError (message : String)

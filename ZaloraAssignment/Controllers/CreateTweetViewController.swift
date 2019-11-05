@@ -25,9 +25,10 @@ class CreateTweetViewController: UIViewController, Alert, Connectivity {
     
     let createTweetViewModel : CreateTweetViewModel = CreateTweetViewModel()
     
+    /// override viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         bindDismissKeyboard()
         bindTweetButton()
         bindCharacterCountlabel()
@@ -39,6 +40,15 @@ class CreateTweetViewController: UIViewController, Alert, Connectivity {
         createTweetViewModel.bindDataSource(tableView: tableView)
     }
     
+    /**
+     This function binds the tweetButton.
+     
+     ### Usage Example: ###
+     ````
+     bindTweetButton()
+     
+     ````
+     */
     private func bindTweetButton() {
         tweetButton.rx.tap.debounce(.seconds(2), scheduler: MainScheduler.instance).subscribe(onNext : { [weak self] in
             guard (self?.isConnectedToInternet(inViewController: self))! else {
@@ -67,18 +77,36 @@ class CreateTweetViewController: UIViewController, Alert, Connectivity {
         }).disposed(by: disposeBag)
     }
     
+    /**
+     This function binds the messageTextView to characterCountLabel.
+     
+     ### Usage Example: ###
+     ````
+     bindCharacterCountlabel()
+     
+     ````
+     */
     private func bindCharacterCountlabel() {
         messageTextView.rx.text
             .map {
                 if let msg = $0 {
                     return "Character count: \(msg.count)"
                 } else {
-                   return ""
+                    return ""
                 }
-            }
+        }
         .bind(to: characterCountLabel.rx.text).disposed(by: disposeBag)
     }
     
+    /**
+     This function binds the swipeGesture to messageTextView.
+     
+     ### Usage Example: ###
+     ````
+     bindClearButton()
+     
+     ````
+     */
     private func bindClearButton() {
         let swipeGesture = UISwipeGestureRecognizer()
         swipeGesture.direction = .left
@@ -90,12 +118,30 @@ class CreateTweetViewController: UIViewController, Alert, Connectivity {
         }.disposed(by: disposeBag)
     }
     
+    /**
+     This function binds the closeButton.
+     
+     ### Usage Example: ###
+     ````
+     bindCloseButton()
+     
+     ````
+     */
     private func bindCloseButton() {
         closeButton.rx.tap.subscribe(onNext : {  [ weak self ] in
             _ = self?.navigationController?.popViewController(animated: true)
         }).disposed(by: disposeBag)
     }
     
+    /**
+     This function binds tap-Gesture to dismiss the keyboard.
+     
+     ### Usage Example: ###
+     ````
+     bindDismissKeyboard()
+     
+     ````
+     */
     private func bindDismissKeyboard() {
         let tapGesture = UITapGestureRecognizer()
         self.view.addGestureRecognizer(tapGesture)
@@ -103,7 +149,16 @@ class CreateTweetViewController: UIViewController, Alert, Connectivity {
             self?.messageTextView.resignFirstResponder()
         }.disposed(by: disposeBag)
     }
-
+    
+    /**
+     This function is responsible for setup the posted tweets table view.
+     
+     ### Usage Example: ###
+     ````
+     setupTableView()
+     
+     ````
+     */
     private func setupTableView() {
         tableView.separatorColor = UIColor.clear
         tableView.estimatedRowHeight = 40.0
