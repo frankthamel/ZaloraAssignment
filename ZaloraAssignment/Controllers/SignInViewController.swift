@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController,Connectivity {
     
     @IBOutlet weak var signInWithTwitterButton: RoundedUIButton!
     
@@ -30,7 +30,9 @@ class SignInViewController: UIViewController {
     func bindSignInWithTwitterButton() {
         signInWithTwitterButton.rx.tap.debounce(.seconds(1), scheduler: MainScheduler.instance).subscribe(onNext : { [unowned self] in
             // Authenticate using Twitter
-            self.signInViewModel.authorize(inViewController: self)
+            if self.isConnectedToInternet(inViewController: self) {
+                self.signInViewModel.authorize(inViewController: self)
+            }
             
         }).disposed(by: disposeBag)
     }

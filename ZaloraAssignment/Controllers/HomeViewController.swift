@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, Connectivity {
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileNameLabel: UILabel!
@@ -37,7 +37,11 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tweetListViewModel.fetchTweets(tableView: tableView)
+        
+        if isConnectedToInternet(inViewController: self) {
+            tweetListViewModel.fetchTweets(tableView: tableView)
+        }
+        
     }
     
     private func setupHomeViewModelObservable() {
@@ -77,7 +81,12 @@ class HomeViewController: UIViewController {
     }
     
     @objc func refreshData() {
-        tweetListViewModel.fetchTweets(tableView: tableView)
+        if isConnectedToInternet(inViewController: self) {
+            tableView.refreshControl?.attributedTitle = NSAttributedString(string: "Fetching Tweets ...", attributes: .none)
+            tweetListViewModel.fetchTweets(tableView: tableView)
+        } else {
+            tableView.refreshControl?.attributedTitle = NSAttributedString(string: "No internet connection", attributes: .none)
+        }
     }
 
 }

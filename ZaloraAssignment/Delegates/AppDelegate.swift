@@ -66,5 +66,6 @@ extension AppDelegate {
             Fabric.sharedSDK().debug = false
         #endif
     }
+
 }
 

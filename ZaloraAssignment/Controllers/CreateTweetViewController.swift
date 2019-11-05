@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class CreateTweetViewController: UIViewController, Alert {
+class CreateTweetViewController: UIViewController, Alert, Connectivity {
     
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet weak var clearButton: UIView!
@@ -41,6 +41,10 @@ class CreateTweetViewController: UIViewController, Alert {
     
     private func bindTweetButton() {
         tweetButton.rx.tap.debounce(.seconds(2), scheduler: MainScheduler.instance).subscribe(onNext : { [weak self] in
+            guard (self?.isConnectedToInternet(inViewController: self))! else {
+                return
+            }
+            
             self?.tweetButton.isUserInteractionEnabled = false
             self?.createTweetViewModel.postTweet(message: self?.messageTextView.text ?? "") { (completed , success , error) in
                 
