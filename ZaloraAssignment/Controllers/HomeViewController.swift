@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, Connectivity {
     @IBOutlet weak var profileNameLabel: UILabel!
     @IBOutlet weak var createTweetButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var signOutButton: UIBarButtonItem!
     
     // Defining a dispose bag to dispose observables
     var disposeBag = DisposeBag()
@@ -30,6 +31,7 @@ class HomeViewController: UIViewController, Connectivity {
         // setup observers
         setupHomeViewModelObservable()
         bindCreateTweetButton()
+        bindSignOutButton()
         
         // setup view
         setupTableView()
@@ -84,6 +86,25 @@ class HomeViewController: UIViewController, Connectivity {
             
             // Navigate to Create Tweet ViewController
             self?.performSegue(withIdentifier: NAVIGATE_TO_CREATE_TWEET_VIEW_CONTROLLER_SEGUE, sender: nil)
+            
+        }).disposed(by: disposeBag)
+    }
+    
+    /**
+     This function binds the sign out button.
+     
+     ### Usage Example: ###
+     ````
+     bindSignOutButton()
+     
+     ````
+     */
+    private func bindSignOutButton() {
+        signOutButton.rx.tap.throttle(.milliseconds(500), scheduler: MainScheduler.instance).subscribe(onNext : {  [ weak self ] in
+            
+            // Navigate to SignIn ViewController
+            _ = TwitterService()
+            self?.performSegue(withIdentifier: NAVIGATE_TO_SIGN_IN_VIEW_CONTROLLER_SEGUE, sender: nil)
             
         }).disposed(by: disposeBag)
     }

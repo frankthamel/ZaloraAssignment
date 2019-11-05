@@ -29,6 +29,9 @@ internal let NAVIGATE_TO_HOME_VIEW_CONTROLLER_SEGUE : String = "NavigateToHomeVi
 /// This is the segue identifier for the create-tweet-page navigation segue.
 internal let NAVIGATE_TO_CREATE_TWEET_VIEW_CONTROLLER_SEGUE : String = "NavigateToCreateTweetViewControllerSegue"
 
+/// This is the segue identifier for the signout navigation segue.
+internal let NAVIGATE_TO_SIGN_IN_VIEW_CONTROLLER_SEGUE : String = "NavigateToSignInViewControllerSegue"
+
 
 // MARK: View Controller Names
 /// This is the identifier for the Home-Navigation-Controller

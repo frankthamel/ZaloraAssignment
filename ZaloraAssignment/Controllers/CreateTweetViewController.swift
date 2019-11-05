@@ -114,6 +114,7 @@ class CreateTweetViewController: UIViewController, Alert, Connectivity {
         swipeGesture.rx.event.bind {[weak self] (gesture) in
             if gesture.direction == .left {
                 self?.messageTextView.text = ""
+                self?.createTweetViewModel.dataSource.onNext([])
             }
         }.disposed(by: disposeBag)
     }

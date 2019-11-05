@@ -68,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
+            <point key="canvasLocation" x="326" y="863"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="mkI-4C-gF3">
@@ -195,13 +195,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hzu-6c-i0d"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Khd-XD-w2h"/>
+                    <navigationItem key="navigationItem" id="Khd-XD-w2h">
+                        <barButtonItem key="rightBarButtonItem" title="Sign out" id="UP9-R5-1Zb"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="createTweetButton" destination="1pJ-c7-5cr" id="qap-j4-q1f"/>
                         <outlet property="profileImageView" destination="9tx-62-Ov3" id="hOJ-9Z-Nso"/>
                         <outlet property="profileNameLabel" destination="fLn-Uo-imD" id="7oF-zY-y1a"/>
+                        <outlet property="signOutButton" destination="UP9-R5-1Zb" id="W1u-rW-KuR"/>
                         <outlet property="tableView" destination="SVQ-ty-mIE" id="qsI-8a-qyU"/>
                         <segue destination="Pf6-PS-Mox" kind="show" identifier="NavigateToCreateTweetViewControllerSegue" id="HMa-3K-BtV"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="NavigateToSignInViewControllerSegue" id="Ueq-AZ-o7L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9V-9k-zkg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
